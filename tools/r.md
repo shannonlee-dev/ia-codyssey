@@ -1,4 +1,6 @@
-git clone https://github.com/shannonlee-dev/ia-codyssey.git
+git clone https://github.com/shannonlee-dev/ia-codyssey.git.
+
+
 
 c4r4s4% git init
 hint: Using 'master' as the name for the initial branch. This default branch name
@@ -54,15 +56,9 @@ After doing this, you may fix the identity used for this commit with:
 
 c4r4s4% git branch
 * master
-c4r4s4% git config --global init.defaultBranch main
 
-c4r4s4% git branch
-* master
 c4r4s4% git branch -m main
-c4r4s4% ;s
-zsh: command not found: s
-c4r4s4% git branch
-* main
+
 c4r4s4% git push origin main
 
 git config --global credential.helper store
