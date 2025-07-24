@@ -8,7 +8,7 @@ from gtts.tts import gTTSError
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_LANG = os.getenv("DEFAULT_LANG", "ko")
-ALLOWED_LANGS = {"ko": "한국어", "en": "영어", "ja": "일본어", "es": "스페인어"}
+LANGS = {"ko": "한국어", "en": "영어", "ja": "일본어", "es": "스페인어"}
 
 app = Flask(
     __name__,
@@ -29,7 +29,7 @@ def index():
 
         if not input_text:
             error = "텍스트를 입력하세요."
-        elif selected_lang not in ALLOWED_LANGS:
+        elif selected_lang not in LANGS:
             error = "지원하지 않는 언어입니다."
         else:
             try:
@@ -49,7 +49,7 @@ def index():
         "index.html",
         error=error,
         audio=audio_b64,
-        langs=ALLOWED_LANGS,
+        langs=LANGS,
         selected_lang=selected_lang,
         input_text=input_text,
         david_img_url=david_img_url,
